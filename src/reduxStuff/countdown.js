@@ -4,7 +4,10 @@ function countdown(state = {
   running: false,
   timeRemaining: 0
 }, action) {
-  const { payload, type } = action
+  const {
+    payload,
+    type
+  } = action
   switch (type) {
     case constants.SET_RUNNING:
       return {

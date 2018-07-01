@@ -39,9 +39,9 @@ class CountDownTimer extends React.Component {
                   value={values.startTime}
                   error={!!(touched.startTime && errors.startTime)}
                   fluid size="big" name="startTime" placeholder='hh:mm:ss' />
-                { touched.startTime && errors.startTime && <Label basic color='red' pointing>
+                {touched.startTime && errors.startTime && <Label basic color='red' pointing>
                   {errors.startTime}
-                </Label> }
+                </Label>}
               </Grid.Column>
               <Grid.Column textAlign="center" style={{ marginTop: 10 }} tablet={5} mobile={14} computer={4} largeScreen={4}>
                 <Header as='h1'>End Time</Header>
@@ -51,9 +51,9 @@ class CountDownTimer extends React.Component {
                   value={values.endTime}
                   error={!!(touched.endTime && errors.endTime)}
                   fluid size="big" name="endTime" placeholder='hh:mm:ss' />
-                { touched.endTime && errors.endTime && <Label basic color='red' pointing>
+                {touched.endTime && errors.endTime && <Label basic color='red' pointing>
                   {errors.endTime}
-                </Label> }
+                </Label>}
               </Grid.Column>
             </Grid.Row>
             <Grid.Row centered>
@@ -63,7 +63,7 @@ class CountDownTimer extends React.Component {
             </Grid.Row>
             <Grid.Row centered>
               <Grid.Column textAlign="center" tablet={10} mobile={14} computer={8} largeScreen={8}>
-                <Button fluid type="submit" color={running ? 'red' : 'green'} size='huge'>{ running ? 'Stop Countdown' : 'Start Countdown'}</Button>
+                <Button fluid type="submit" color={running ? 'red' : 'green'} size='huge'>{running ? 'Stop Countdown' : 'Start Countdown'}</Button>
               </Grid.Column>
             </Grid.Row>
           </Grid>

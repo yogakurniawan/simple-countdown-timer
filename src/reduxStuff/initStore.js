@@ -17,11 +17,11 @@ const initStore = (initialState = {}) => {
 
   const enhancers = [
     applyMiddleware(...middleware),
-  ];
+  ]
 
   const composeEnhancers =
     process.env.NODE_ENV !== 'production'
-      ? composeWithDevTools : compose;
+      ? composeWithDevTools : compose
 
   const store = createStore(
     reducers,

@@ -7,7 +7,7 @@ class App extends Component {
       <React.Fragment>
         <Main />
       </React.Fragment>
-    );
+    )
   }
 }
 

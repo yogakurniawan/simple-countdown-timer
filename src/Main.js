@@ -5,7 +5,7 @@ import Countdown from 'containers/Countdown'
 const Main = () => (
   <main>
     <Switch>
-      <Route exact path='/' component={Countdown}/>
+      <Route exact path='/' component={Countdown} />
     </Switch>
   </main>
 )
