@@ -10,17 +10,8 @@ let intervalId
 
 class CountDownTimer extends React.Component {
 
-  handleClearClick = () => {
-    clearInterval(this.intervalId)
-    this.setState(this.initialState)
-  }
-
   componentWillUnmount() {
     intervalId && clearInterval(intervalId)
-  }
-
-  test = () => {
-    this.props.history.push('/')
   }
 
   render() {
