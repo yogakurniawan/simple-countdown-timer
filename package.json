@@ -2,6 +2,7 @@
   "name": "derp-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yogakurniawan.github.io/simple-countdown-timer",
   "dependencies": {
     "date-fns": "^1.29.0",
     "formik": "^0.11.11",
