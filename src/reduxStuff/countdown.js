@@ -2,7 +2,7 @@ import constants from 'constants/actionTypes'
 
 function countdown(state = {
   running: false,
-  timeRemaining: 0
+  timeLeft: 0
 }, action) {
   const {
     payload,
@@ -14,10 +14,10 @@ function countdown(state = {
         ...state,
         running: payload
       }
-    case constants.SET_TIME_REMAINING:
+    case constants.SET_TIME_LEFT:
       return {
         ...state,
-        timeRemaining: payload
+        timeLeft: payload
       }
     default:
       return state
