@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/simple-countdown-timer/precache-manifest.f3227605c2fc9bd1e61bc4013aa3839d.js"
+  "/simple-countdown-timer/precache-manifest.bb09a838e8a53284bf077ebebf771dc9.js"
 );
 
 workbox.clientsClaim();
@@ -32,5 +32,3 @@ workbox.routing.registerNavigationRoute("/index.html", {
   
   blacklist: [/^\/__/,/\/[^\/]+.[^\/]+$/],
 });
-
-console.log('Hello from sw.js');
