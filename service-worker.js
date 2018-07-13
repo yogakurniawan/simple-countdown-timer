@@ -29,6 +29,34 @@ workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute("/index.html", {
-  
-  blacklist: [/^\/__/,/\/[^\/]+.[^\/]+$/],
+
+  blacklist: [/^\/__/, /\/[^\/]+.[^\/]+$/],
+});
+
+self.addEventListener('fetch', async (event) => {
+  // Configure the strategy in advance.
+  const strategy = workbox.strategies.staleWhileRevalidate({
+    cacheName: 'api-cache'
+  });
+
+  // Make two requests using the strategy.
+  // Because we're passing in event, event.waitUntil() will be called automatically.
+  const promise = strategy.makeRequest({
+    event,
+    request: 'https://jsonplaceholder.typicode.com/users/1'
+  });
+  // const secondPromise = strategy.makeRequest({event, request: 'https://example.com/api2'});
+
+  const response = await promise;
+  console.log(response.text())
+  console.log(response)
+  // const [firstBody, secondBody] = await Promise.all(firstResponse.text(), secondResponse.text());
+
+  // // Assume that we just want to concatenate the first API response with the second to create the
+  // // final response HTML.
+  // const compositeResponse = new Response(firstBody + secondBody, {
+  //   headers: {'content-type': 'text/html'},
+  // });
+
+  // event.respondWith(compositeResponse);
 });
