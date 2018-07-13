@@ -32,3 +32,5 @@ workbox.routing.registerNavigationRoute("/index.html", {
   
   blacklist: [/^\/__/,/\/[^\/]+.[^\/]+$/],
 });
+
+console.log('Hello from sw.js');
